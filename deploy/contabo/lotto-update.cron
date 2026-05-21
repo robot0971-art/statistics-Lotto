@@ -1,0 +1,8 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Saturday 22:00 KST first attempt
+0 22 * * 6 cd /var/www/lotto && /bin/bash deploy/contabo/run-update.sh >> /var/log/lotto-update.log 2>&1
+
+# Sunday 09:00 KST fallback sync
+0 9 * * 0 cd /var/www/lotto && /bin/bash deploy/contabo/run-update.sh >> /var/log/lotto-update.log 2>&1

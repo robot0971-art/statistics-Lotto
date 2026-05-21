@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node scripts/serve.js --open",
+    "serve": "node scripts/serve.js",
+    "update:data": "node scripts/update_lotto_data.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.40.0"
+  }
+}
